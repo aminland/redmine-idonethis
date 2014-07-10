@@ -27,7 +27,7 @@ class IDoneThisListener < Redmine::Hook::Listener
 			:short => true
 		}]
 
-		IDoneThisMailer.deliver_idone_notification( email, journal.user.mail, msg, attachment)
+		IDoneThisMailer.deliver_idone_notification( email, issue.author.mail, msg, attachment)
 	end
 
 	def controller_issues_edit_after_save(context={})
