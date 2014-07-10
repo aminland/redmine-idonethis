@@ -138,7 +138,7 @@ class IDoneThisMailer < Mailer
 	end
 private
 	def to_email_body(msg, attachment=nil)
-    	body = "Redmine: #{msg} "
+    	body = "#{msg} "
 		body += "| Text => #{attachment[:text]}" if not attachment[:text].blank?
 		attachment[:fields].each do |f|
 			body += ", #{f[:title]} => #{f[:value]}" 
